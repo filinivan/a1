@@ -1,6 +1,6 @@
 class First < ActiveRecord::Migration[5.2]
   def change
-    create_table :clients do |w|
+    create_table :words do |w|
           w.text :word
           w.text :translate
           w.integer :good
@@ -8,5 +8,6 @@ class First < ActiveRecord::Migration[5.2]
 
           w.timestamps
         end
+        Word.create :word => 'test'
   end
 end
