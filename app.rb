@@ -3,6 +3,9 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 
+#Подключение базы данных
+set :database, "sqlite3:a1.db"
+
 get '/' do
-	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
+	erb :index
 end
