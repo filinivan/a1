@@ -1,0 +1,16 @@
+<br>
+<br>
+
+<h2 class="text-center">Learn page</h2>
+
+<% @words.each do |item|%>
+  <p class="text-center font-weight-bold"><%= item.word %></p>
+<% end %>
+
+<form action="/learn" method="post">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Перевод</label>
+    <input name="word[translate]" class="form-control" placeholder="Введите перевод">
+  </div>
+  <button type="submit" class="btn btn-primary">Готово</button>
+</form>

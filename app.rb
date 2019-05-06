@@ -19,7 +19,6 @@ get '/' do
 end
 
 get '/add' do
-	@w = Words.new
 	erb :add
 end
 
@@ -32,5 +31,9 @@ post '/add' do
     @error = @w.errors.full_messages.first
     erb :add
   end
+	end
 
-end
+	get '/learn' do
+		@words = Words.order "created_at DESC"
+		erb :learn
+	end
