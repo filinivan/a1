@@ -39,7 +39,7 @@ post '/add' do
 	post '/learn' do
 			@answer = params[:answer]
 
-			if @answer["translate"] == @words["translate"]
+			if @answer["ru"] == @answer["de"]
 				erb "Правильно!"
 			else
 				erb "Неверно! Правильный ответ : #{@words["translate"]}"
