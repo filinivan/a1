@@ -42,7 +42,7 @@ post '/add' do
 			if @answer["ru"] == @answer["de"]
 				erb "Правильно!"
 			else
-				erb "Неверно! Правильный ответ : #{@answer["translate"]}"
+				erb "Неверно! Правильный ответ : #{@answer["de"]}"
 			end
 
 	end
