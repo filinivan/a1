@@ -13,8 +13,6 @@ class Words < ActiveRecord::Base
 end
 
 get '/' do
-	#@words = Word.order "created_at DESC"
-#	@words = Word.find(params[:id])
 	erb :index
 end
 
@@ -34,6 +32,17 @@ post '/add' do
 	end
 
 	get '/learn' do
-		@words = Words.order "created_at DESC"
+		@word = Words.limit(1).order("RANDOM()")
 		erb :learn
+	end
+
+	post '/learn' do
+			@answer = params[:answer]
+
+			if @answer["translate"] == @words["translate"]
+				erb "Правильно!"
+			else
+				erb "Неверно! Правильный ответ : #{@words["translate"]}"
+			end
+
 	end
