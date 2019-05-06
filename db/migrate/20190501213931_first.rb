@@ -8,6 +8,6 @@ class First < ActiveRecord::Migration[5.2]
 
           w.timestamps
         end
-        Word.create :word => 'test'
+        
   end
 end
