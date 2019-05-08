@@ -40,9 +40,11 @@ post '/add' do
 			@answer = params[:answer]
 
 			if @answer["ru"] == @answer["de"]
-				erb "Правильно!"
+				@word = Words.limit(1).order("RANDOM()")
+				erb :learn
 			else
-				erb "Неверно! Правильный ответ : #{@answer["de"]}"
+				@error = "Неверно! Правильный ответ : #{@answer["de"]}"
+				#erb "Неверно! Правильный ответ : #{@answer["de"]}"
 			end
 
 	end
