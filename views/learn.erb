@@ -6,12 +6,14 @@
 
     <div class="form-group" hidden="true">
       <input name="answer[de]" class="form-control" value=<%= item.translate %>>
+      <input name="answer[word]" class="form-control" value=<%= item.word %>>
     </div>
   <% end %>
 
-  <div class="form-group">
-    <label for="exampleInputPassword1">Перевод</label>
-    <input name="answer[ru]" class="form-control" placeholder="Введите перевод">
-  </div>
-  <button type="submit" class="btn btn-primary">Готово</button>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Перевод</label>
+      <input name="answer[ru]" class="form-control" placeholder="Введите перевод">
+    </div>
+    <button type="submit" class="btn btn-primary">Готово</button>
+
 </form>
