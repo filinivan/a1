@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_213931) do
   create_table "words", force: :cascade do |t|
     t.text "word"
     t.text "translate"
-    t.integer "good"
-    t.integer "bad"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
