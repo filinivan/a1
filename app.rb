@@ -43,7 +43,9 @@ post '/add' do
 				@word = Words.limit(1).order("RANDOM()")
 				erb :learn
 			else
-				@error = "Неверно! Правильный ответ : #{@answer["de"]}"
+				@deutsch = @answer["de"]
+				@russian = @answer["ru"]
+				erb :answer
 				#erb "Неверно! Правильный ответ : #{@answer["de"]}"
 			end
 
