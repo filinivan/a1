@@ -13,6 +13,7 @@ class Words < ActiveRecord::Base
 end
 
 get '/' do
+	@bad_rating = Words.order(id: :desc)	
 	erb :index
 end
 
