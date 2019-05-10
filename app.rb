@@ -40,9 +40,15 @@ post '/add' do
 			@answer = params[:answer]
 
 			if @answer["ru"] == @answer["de"]
+				rating = Words.find_by(id: @answer["id"])
+				rating_num = rating["rating"] + 1
+				rating.update(rating: rating_num)
 				@word = Words.limit(1).order("RANDOM()")
 				erb :learn
 			else
+				rating = Words.find_by(id: @answer["id"])
+				rating_num = rating["rating"] - 1
+				rating.update(rating: rating_num)
 				@word_by_id = Words.find(@answer["id"])
 				erb :answer
 			end
