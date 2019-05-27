@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_213931) do
+ActiveRecord::Schema.define(version: 2019_05_27_123104) do
+
+# Could not dump table "sqlite_stat1" because of following StandardError
+#   Unknown type '' for column 'tbl'
+
+# Could not dump table "sqlite_stat4" because of following StandardError
+#   Unknown type '' for column 'tbl'
 
   create_table "words", force: :cascade do |t|
     t.text "word"
@@ -18,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_05_01_213931) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "phraze"
+    t.text "level"
   end
 
 end
