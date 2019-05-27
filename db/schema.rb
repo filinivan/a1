@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_123104) do
+ActiveRecord::Schema.define(version: 2019_05_27_130837) do
 
 # Could not dump table "sqlite_stat1" because of following StandardError
 #   Unknown type '' for column 'tbl'
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_123104) do
     t.datetime "updated_at", null: false
     t.text "phraze"
     t.text "level"
+    t.text "thema"
   end
 
 end
